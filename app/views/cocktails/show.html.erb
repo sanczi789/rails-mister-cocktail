@@ -1,0 +1,29 @@
+<div class="navbar-wagon">
+  <%= image_tag "cocktail.png", alt: "cocktail", height: 120 %>
+  <h1><%= @cocktail.name %></h1>
+  <div>
+    <i class="fa fa-undo" aria-hidden="true"></i>
+    <%= link_to "Back to list", root_path, class: "link" %>
+  </div>
+</div>
+<div class="container">
+  <% @cocktail.doses.each do |dose| %>
+    <ul class="list-inline">
+      <li>
+      <%= dose.description %> <%= dose.ingredient.name %>
+      <%= link_to cocktail_dose_path(@cocktail, dose),
+        method: :delete,
+        data: { confirm: "Are you sure?" } do %>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %>
+      </li>
+    </ul>
+  <% end %>
+  <h2>Add a dose</h2>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>
+

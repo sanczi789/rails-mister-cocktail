@@ -1,0 +1,16 @@
+// Import your components CSS files here.
+@import "alert";
+@import "navbar";
+
+body {
+  background-image: url("palm.jpeg");
+  height: 100vh;
+  background-size: cover;
+}
+
+.container {
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+}

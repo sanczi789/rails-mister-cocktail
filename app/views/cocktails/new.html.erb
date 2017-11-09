@@ -1,0 +1,15 @@
+<div class="navbar-wagon">
+  <%= image_tag "create.png", alt: "create", height: 120 %>
+  <h1>Create a new cocktail</h1>
+  <div>
+    <i class="fa fa-undo" aria-hidden="true"></i>
+    <%= link_to "Back to list", root_path, class: "link" %>
+  </div>
+</div>
+<div class="container">
+  <%= simple_form_for [@cocktail] do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Submit your cocktail", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
