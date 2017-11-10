@@ -4,7 +4,7 @@
 @import "card";
 
 body {
-  background-image: url("pt.jpg");
+  background-image: asset-url("pt.jpg");
   height: 100vh;
   background-size: cover;
   text-align: center;
