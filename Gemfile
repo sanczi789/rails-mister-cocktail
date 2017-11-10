@@ -26,6 +26,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'pg'
 ruby '2.3.5'
+gem 'figaro'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
