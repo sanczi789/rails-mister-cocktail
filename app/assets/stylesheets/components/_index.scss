@@ -1,16 +1,28 @@
 // Import your components CSS files here.
 @import "alert";
 @import "navbar";
+@import "card";
 
 body {
-  background-image: url("palm.jpeg");
+  background-image: url("pt.jpg");
   height: 100vh;
   background-size: cover;
+  text-align: center;
+  h1 {
+    font-family: $my-head;
+    color: #EF3054;
+    font-size: 53px;
+    // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
 }
 
-.container {
+.container-fluid.pages {
   padding: 10px;
   margin: 10px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
+  text-align: center;
+}
+.form {
+  width: 400px;
 }

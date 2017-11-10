@@ -1,15 +1,23 @@
 <div class="navbar-wagon">
-  <%= image_tag "create.png", alt: "create", height: 120 %>
-  <h1>Create a new cocktail</h1>
+  <div class="logo">
+    <%= image_tag "create.png", alt: "create", height: 120 %>
+    <h1>Create a new cocktail</h1>
+  </div>
+
   <div>
     <i class="fa fa-undo" aria-hidden="true"></i>
     <%= link_to "Back to list", root_path, class: "link" %>
   </div>
 </div>
-<div class="container">
-  <%= simple_form_for [@cocktail] do |f| %>
-    <%= f.input :name %>
-    <%= f.submit "Submit your cocktail", class: "btn btn-primary" %>
-  <% end %>
+<div class="container-fluid pages">
+  <div class="form">
+    <%= simple_form_for [@cocktail] do |f| %>
+      <%= f.input :name, class: "new-name" %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.submit "Submit your cocktail", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
 </div>
 

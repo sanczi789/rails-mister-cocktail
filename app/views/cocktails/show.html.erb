@@ -1,12 +1,15 @@
 <div class="navbar-wagon">
-  <%= image_tag "cocktail.png", alt: "cocktail", height: 120 %>
-  <h1><%= @cocktail.name %></h1>
+  <div class="logo">
+    <%= image_tag "cocktail.png", alt: "cocktail", height: 120 %>
+    <h1><%= @cocktail.name %></h1>
+  </div>
+
   <div>
     <i class="fa fa-undo" aria-hidden="true"></i>
     <%= link_to "Back to list", root_path, class: "link" %>
   </div>
 </div>
-<div class="container">
+<div class="container-fluid pages">
   <% @cocktail.doses.each do |dose| %>
     <ul class="list-inline">
       <li>

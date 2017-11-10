@@ -20,6 +20,7 @@ gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'pg_search'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
@@ -27,6 +28,8 @@ gem 'simple_form'
 gem 'pg'
 ruby '2.3.5'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
